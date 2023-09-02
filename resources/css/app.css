@@ -1,0 +1,288 @@
+/* Sopa de Letras */
+
+.sl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor de la sopa de letras */
+
+#contenedor {
+    padding: 5px;
+}
+
+#contenedor div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Estilo para cada cuadrado de la sopa de letras */
+
+#contenedor .letra {
+    height: 30px;
+    width: 30px;
+    text-transform: uppercase;
+    background-color: white;
+    border: 0;
+    font: 1em sans-serif;
+}
+
+/* Colores cuando se selecciona un cuadrado */
+
+#contenedor .selected {
+    background-color: rgb(8, 179, 2);
+}
+
+#contenedor:hover .selected:hover {
+    background-color: rgb(145, 255, 0);
+    font-weight: bold;
+}
+
+#contenedor>div>button:hover {
+    background-color: rgb(145, 255, 0);
+    font-weight: bold;
+}
+
+/* Indica que la letra es parte de una palabra que se ha encontrado */
+
+#contenedor .found {
+    background-color: #c0c0c0;
+    color: white;
+    border: 1px solid black;
+    font-weight: bold;
+    text-shadow: 0px 2px 3px #000;
+}
+
+#contenedor .found:hover {
+    background-color: rgb(145, 255, 0);
+    font-weight: bold;
+}
+
+/* Colores de palabras no encontradas cuando se pulsa el botón Resolver sopa de letras*/
+
+#contenedor .solved {
+    background-color: purple;
+    color: white;
+}
+
+/* Cambio de color de fondo cuando se encuentras todas las palabras*/
+
+#contenedor .complete {
+    background-color: green;
+}
+
+/**
+* Estilos para la lista de palabras
+*/
+
+#palabras-sopadeletras {
+    padding-top: 10px;
+    column-count: 3;
+    column-gap: -50px;
+    /* width: 300px; */
+}
+
+#palabras-sopadeletras ul {
+    list-style-type: none;
+}
+
+#palabras-sopadeletras li {
+    padding: 3px 0;
+    font: 1em sans-serif;
+}
+
+/*  */
+@media only screen and (max-width: 424px) {
+    #contenedor .letra {
+        height: 22px;
+        width: 22px;
+        font-size: 10px;
+    }
+  }
+
+/*Indica que la palabra ha sido encontrada en la lista */
+
+#palabras-sopadeletras .palabraEncontrada {
+    text-decoration: line-through;
+    color: rgb(255, 0, 0);
+}
+
+
+/* Final Sopa de Letras */
+
+/* Links del footer en blanco */
+.footer_a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Fuentes de texto */
+.titulo{
+    font-family:'R';
+}
+
+.texto{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* CSS de comentarios */
+.c-badge{
+	background-color: #35b69f;
+    color: white;
+    height: 20px;
+    font-size: 11px;
+    width: 92px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.comment-text{
+	font-size: 13px;
+}
+
+.wish{
+	color:#35b69f;
+}
+
+.comment-section{
+    border: none;
+}
+
+.user-feed{
+	font-size: 14px;
+	margin-top: 12px;
+}
+
+/* CSS de SR */
+.sr{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+/* CSS del Show de ScapeRoom */
+header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background: url("/assets/img/lock.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+header.masthead:before {
+    content: "";
+    position: absolute;
+    background-color: #1c375e;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+header.masthead h1,
+header.masthead .h1 {
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    header.masthead {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+
+    header.masthead h1,
+    header.masthead .h1 {
+        font-size: 3rem;
+    }
+}
+/*-------------------------------------------------------------------HEADER---------------------------------------------------------*/
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+  
+  .hero-container {
+    /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+  }
+  
+  .hero-container > h1 {
+    color: #fff;
+    font-size: 100px;
+    margin-top: -100px;
+  }
+  
+  .hero-container > p {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .hero-btns {
+    margin-top: 32px;
+  }
+  
+  .hero-btns .btn {
+    margin: 6px;
+  }
+  
+  .fa-play-circle {
+    margin-left: 4px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .hero-container > h1 {
+      font-size: 70px;
+      margin-top: -150px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-container > h1 {
+      font-size: 50px;
+      margin-top: -100px;
+    }
+  
+    .hero-container > p {
+      font-size: 30px;
+    }
+  
+    .btn-mobile {
+      display: block;
+      text-decoration: none;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  }
+
+  /* .brown{
+    background-color: #1B1013;
+  } */
+
+  .white{
+    color: white;
+    text-decoration: none;
+  }
